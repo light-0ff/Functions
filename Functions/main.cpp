@@ -1,33 +1,5 @@
-#include<iostream>
-using namespace std;
+#include "Functions.h"
 
-int add(int a, int b);// прототип функции, (Function declaration - обявление функции)
-int sub(int a, int b);
-int mul(int a, int b);
-double div_(int a, int b);
-
-int Factorial(int n, int c)
-{
-	for (int i = 1; i <= n; i++)
-	{
-		c = c * i;
-		cout << i;
-		if (i < n)	cout << " * ";
-		else  cout << " * " << n + 1 << " = ";
-	}
-	return c; // (c) запоминает результат 
-}
-int Power(int n, int stepen, int c)
-{
-	for (int i = 0; i < stepen - 1; i++)
-	{
-		n *= c;
-	}
-	return n;
-}
-
-#define fact
-#define step
 void main()
 {
 	setlocale(LC_ALL, "");
@@ -64,29 +36,6 @@ void main()
 #endif // step
 }
 
-int add(int a, int b)// реализация функции, (Function defenition - определение функции)
-{
-	int c = a + b;
-	return c;
-}
-
-int sub(int a, int b)
-{
-	return a - b;
-}
-
-int mul(int a, int b)
-{
-	//умножение
-	return a * b;
-}
-
-double div_(int a, int b)
-{
-	//деление
-	double c = (double)a / b;
-	return c;
-}
 /*	Function doesn't take an arguments
 	-too few arguments in function call
 	-too many arguments in function call
