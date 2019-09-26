@@ -1,6 +1,53 @@
 #include"Functions.h"
 
-
+void sort(int Arr[], const int n)
+{
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 1 + i; j < n; j++)
+		{
+			if (j == n) break;
+			if (Arr[i] > Arr[j])
+			{
+				int buffer = Arr[i];
+				Arr[i] = Arr[j];
+				Arr[j] = buffer;
+			}
+		}
+	}
+}
+void sort(float Arr[], const int n)
+{
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 1 + i; j < n; j++)
+		{
+			if (j == n) break;
+			if (Arr[i] > Arr[j])
+			{
+				int buffer = Arr[i];
+				Arr[i] = Arr[j];
+				Arr[j] = buffer;
+			}
+		}
+	}
+}
+void sort(double Arr[], const int n)
+{
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 1 + i; j < n; j++)
+		{
+			if (j == n) break;
+			if (Arr[i] > Arr[j])
+			{
+				int buffer = Arr[i];
+				Arr[i] = Arr[j];
+				Arr[j] = buffer;
+			}
+		}
+	}
+}
 void sort(int Arr[ROWS][COLS], const int ROWS, const int COLS)
 {
 	for (int i = 0; i < ROWS; i++)
@@ -40,7 +87,7 @@ void sort(float Arr[ROWS][COLS], const int ROWS, const int COLS)
 					if (i == x and j >= y)
 					{
 						y = j + 1;
-						if (y == COLS) y = COLS - 1;
+						if (y == COLS) break;
 					}
 					if (Arr[i][j] > Arr[x][y])
 					{
@@ -66,7 +113,7 @@ void sort(double Arr[ROWS][COLS], const int ROWS, const int COLS)
 					if (i == x and j >= y)
 					{
 						y = j + 1;
-						if (y == COLS) y = COLS - 1;
+						if (y == COLS) break;
 					}
 					if (Arr[i][j] > Arr[x][y])
 					{
