@@ -7,6 +7,22 @@ void FillRand(int Arr[], const int n)
 		Arr[i] = rand() % 100;
 	}
 }
+void FillRand(float Arr[], const int n)
+{
+	for (int i = 0; i < n; i++)
+	{
+		Arr[i] = rand() % 10000;
+		Arr[i] /= 100;
+	}
+}
+void FillRand(double Arr[], const int n)
+{
+	for (int i = 0; i < n; i++)
+	{
+		Arr[i] = rand() % 10000;
+		Arr[i] /= 100;
+	}
+}
 
 
 void FillRand(int Arr[ROWS][COLS], const int ROWS, const int COLS)

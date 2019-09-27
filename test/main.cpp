@@ -2,7 +2,7 @@
 
 void main()
 {
-	setlocale(LC_ALL, "");
+	setlocale(LC_ALL, "RUS");
 	int Arr[ROWS][COLS];
 
 	FillRand(Arr, ROWS, COLS);
